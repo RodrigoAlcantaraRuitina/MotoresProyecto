@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1470604545496902009}
   - component: {fileID: 3128563003805948712}
+  - component: {fileID: 1778118496454449746}
   m_Layer: 8
   m_Name: controladorSuelo
   m_TagString: Untagged
@@ -66,7 +67,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.004480034, y: -0.19978383}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,8 +77,20 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0448003, y: 0.60043234}
   m_EdgeRadius: 0
+--- !u!114 &1778118496454449746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466621962523058171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa0ccafc3b46292409f25158b5a6903a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5684582269360798666
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +108,7 @@ GameObject:
   - component: {fileID: 2395010493653614223}
   - component: {fileID: 5332951859187016003}
   - component: {fileID: 1181987400434046029}
+  - component: {fileID: 7570410963911262460}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -262,7 +276,6 @@ MonoBehaviour:
   velocidad: 10
   fuerzaSalto: 15
   fuerzaSalto2: 10
-  fuerzaPisoton: 5
 --- !u!114 &3009821900419125727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +333,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controladorDisparo: {fileID: 5712668563699643859}
   bala: {fileID: 7123508163185687286, guid: 1ea522ee94c16244c84344552e32616a, type: 3}
+--- !u!114 &7570410963911262460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684582269360798666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441576944ee072b4ba1e0a2f0b93b028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
 --- !u!1 &5696051134352876356
 GameObject:
   m_ObjectHideFlags: 0
