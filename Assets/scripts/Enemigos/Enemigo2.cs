@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemigo : MonoBehaviour
+public class Enemigo2 : MonoBehaviour
 {
+    //enemigo que disparara
     [SerializeField] private float vida;
 
     public void TomarDaño(float daño)
