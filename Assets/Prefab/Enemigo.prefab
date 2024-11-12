@@ -149,6 +149,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 2
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  targetPoint: 0
+  speed: 2
 --- !u!50 &4408050856117550250
 Rigidbody2D:
   serializedVersion: 5
