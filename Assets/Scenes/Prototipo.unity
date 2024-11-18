@@ -499,11 +499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2395010493653614223, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3009821900419125727, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3128563003805948712, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: m_Enabled
@@ -511,7 +511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5332951859187016003, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5684582269360798666, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: m_Name
@@ -562,8 +562,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 133956274}
     - target: {fileID: 8062200936422192009, guid: eacbf16abcae407488e825c2ea406798, type: 3}
+      propertyPath: tr
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062200936422192009, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8062200936422192009, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: wallCheck
@@ -577,17 +581,29 @@ PrefabInstance:
       propertyPath: wallLayer.m_Bits
       value: 1024
       objectReference: {fileID: 0}
-    - target: {fileID: 8404499907358940851, guid: eacbf16abcae407488e825c2ea406798, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
+    - target: {fileID: 8062200936422192009, guid: eacbf16abcae407488e825c2ea406798, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 2048
       objectReference: {fileID: 0}
     - target: {fileID: 8404499907358940851, guid: eacbf16abcae407488e825c2ea406798, type: 3}
-      propertyPath: m_SleepingMode
+      propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8404499907358940851, guid: eacbf16abcae407488e825c2ea406798, type: 3}
-      propertyPath: m_CollisionDetection
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404499907358940851, guid: eacbf16abcae407488e825c2ea406798, type: 3}
+      propertyPath: m_SleepingMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404499907358940851, guid: eacbf16abcae407488e825c2ea406798, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404499907358940851, guid: eacbf16abcae407488e825c2ea406798, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8962990846197470689, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: m_Material
