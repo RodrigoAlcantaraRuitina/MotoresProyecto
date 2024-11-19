@@ -11,7 +11,8 @@ public class Movimiento : MonoBehaviour
     private bool isFacingRight = true;
 
     private bool isWallSliding;
-    private float wallSlidingSpeed = 2f;
+    private float wallSlidingSpeed = 10f;
+    //private float originalGravityScale;
 
     private bool canDash = true;
     private bool isDashing;
@@ -24,6 +25,11 @@ public class Movimiento : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
+
+    //private void Start()
+    //{
+        //originalGravityScale = rb.gravityScale;
+    //}
 
     void Update()
     {
@@ -78,10 +84,12 @@ public class Movimiento : MonoBehaviour
         {
             isWallSliding = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+            //rb.gravityScale = originalGravityScale * 0.1f;
         }
         else
         {
             isWallSliding = false;
+            //rb.gravityScale = originalGravityScale;
         }
 
     }
