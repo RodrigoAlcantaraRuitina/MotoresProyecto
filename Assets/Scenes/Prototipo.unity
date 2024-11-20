@@ -920,6 +920,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8062200936422192009, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      propertyPath: wallJumpForce.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062200936422192009, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      propertyPath: wallJumpForce.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062200936422192009, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      propertyPath: wallJumpDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8962990846197470689, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
       propertyPath: m_Size.x
       value: 1

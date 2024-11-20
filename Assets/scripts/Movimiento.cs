@@ -20,9 +20,10 @@ public class Movimiento : MonoBehaviour
     private float wallJumpingDirection;
     private float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
-    private float wallJumpingDuration = 0.4f;
-    private Vector2 wallJumpingPower = new Vector2(8f, 16f);
-
+    //private float wallJumpingDuration = 0.4f;
+    //private Vector2 wallJumpingPower = new Vector2(8f, 16f);
+    public float wallJumpDuration;
+    public Vector2 wallJumpForce;
 
     private bool canDash = true;
     private bool isDashing;
@@ -58,6 +59,11 @@ public class Movimiento : MonoBehaviour
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
                 canDoubleJump = true; // Permitir el doble salto
             }
+            if (isWallSliding) 
+            {
+            isWallJumping = true;
+                Invoke("StopWallJumping", wallJumpDuration);
+            }
             else if (canDoubleJump)
             {
                 // Doble salto
@@ -92,11 +98,18 @@ public class Movimiento : MonoBehaviour
             return;
         }
 
-        if (!isWallJumping)
+        //if (!isWallJumping)
+        //{
+            //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        //}
+        if (isWallJumping) 
+        {
+            rb.linearVelocity = new Vector2(-horizontal * wallJumpForce.x, wallJumpForce.y);
+        }
+        else 
         {
             rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
         }
-
         if (isGrounded())
         {
             canDoubleJump = true;
@@ -150,7 +163,7 @@ public class Movimiento : MonoBehaviour
         if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
         {
             isWallJumping = true;
-            rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            //rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             wallJumpingCounter = 0f;
 
             if (transform.localScale.x != wallJumpingDirection)
@@ -161,7 +174,7 @@ public class Movimiento : MonoBehaviour
                 transform.localScale = localScale;
             }
 
-            Invoke(nameof(StopWallJumping), wallJumpingDuration);
+            //Invoke(nameof(StopWallJumping), wallJumpingDuration);
         }
     }
 
