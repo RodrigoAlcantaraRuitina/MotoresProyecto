@@ -6,13 +6,23 @@ using UnityEngine.InputSystem;
 public class Movimiento : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 8f;
+    private float speed = 12f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
+
+    private bool canDoubleJump;
 
     private bool isWallSliding;
     private float wallSlidingSpeed = 10f;
     //private float originalGravityScale;
+
+    private bool isWallJumping;
+    private float wallJumpingDirection;
+    private float wallJumpingTime = 0.2f;
+    private float wallJumpingCounter;
+    private float wallJumpingDuration = 0.4f;
+    private Vector2 wallJumpingPower = new Vector2(8f, 16f);
+
 
     private bool canDash = true;
     private bool isDashing;
@@ -28,7 +38,7 @@ public class Movimiento : MonoBehaviour
 
     //private void Start()
     //{
-        //originalGravityScale = rb.gravityScale;
+    //originalGravityScale = rb.gravityScale;
     //}
 
     void Update()
@@ -40,9 +50,20 @@ public class Movimiento : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && isGrounded())
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+            if (isGrounded())
+            {
+                // Primer salto
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+                canDoubleJump = true; // Permitir el doble salto
+            }
+            else if (canDoubleJump)
+            {
+                // Doble salto
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+                canDoubleJump = false; // Ya no puede hacer doble salto
+            }
         }
 
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
@@ -51,22 +72,40 @@ public class Movimiento : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-              StartCoroutine(Dash());
+            StartCoroutine(Dash());
         }
 
         WallSlide();
+        WallJump();
 
-        Flip();
+        if (!isWallJumping)
+        {
+            Flip();
+        }
     }
 
     private void FixedUpdate()
     {
+
         if (isDashing)
         {
             return;
         }
 
-        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        if (!isWallJumping)
+        {
+            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        }
+
+        if (isGrounded())
+        {
+            canDoubleJump = true;
+        }
+
+        if (isWallSliding)
+        {
+            canDoubleJump = true; // Restablecer el doble salto al deslizarse por una pared
+        }
     }
 
     private bool isGrounded()
@@ -74,7 +113,7 @@ public class Movimiento : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private bool IsWalled() 
+    private bool IsWalled()
     {
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
@@ -92,6 +131,43 @@ public class Movimiento : MonoBehaviour
             //rb.gravityScale = originalGravityScale;
         }
 
+    }
+
+    private void WallJump()
+    {
+        if (isWallSliding)
+        {
+            isWallJumping = false;
+            wallJumpingDirection = -transform.localScale.x;
+            wallJumpingCounter = wallJumpingTime;
+
+            CancelInvoke(nameof(StopWallJumping));
+        }
+        else
+        {
+            wallJumpingCounter -= Time.deltaTime;
+        }
+        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
+        {
+            isWallJumping = true;
+            rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            wallJumpingCounter = 0f;
+
+            if (transform.localScale.x != wallJumpingDirection)
+            {
+                isFacingRight = !isFacingRight;
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+            }
+
+            Invoke(nameof(StopWallJumping), wallJumpingDuration);
+        }
+    }
+
+    private void StopWallJumping()
+    {
+        isWallJumping = false;
     }
     private void Flip()
     {
