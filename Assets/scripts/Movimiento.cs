@@ -14,16 +14,13 @@ public class Movimiento : MonoBehaviour
 
     private bool isWallSliding;
     private float wallSlidingSpeed = 10f;
-    //private float originalGravityScale;
 
     private bool isWallJumping;
     private float wallJumpingDirection;
     private float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
-    //private float wallJumpingDuration = 0.4f;
-    //private Vector2 wallJumpingPower = new Vector2(8f, 16f);
-    public float wallJumpDuration;
-    public Vector2 wallJumpForce;
+    public float wallJumpDuration = 0.4f;
+    public Vector2 wallJumpForce = new Vector2(8f, 16f);
 
     private bool canDash = true;
     private bool isDashing;
@@ -31,16 +28,14 @@ public class Movimiento : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
+    private float maxHorizontalSpeed = 20f;
+    private float maxVerticalSpeed = 25f;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
-
-    //private void Start()
-    //{
-    //originalGravityScale = rb.gravityScale;
-    //}
 
     void Update()
     {
@@ -55,20 +50,17 @@ public class Movimiento : MonoBehaviour
         {
             if (isGrounded())
             {
-                // Primer salto
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
-                canDoubleJump = true; // Permitir el doble salto
+                canDoubleJump = true;
             }
-            if (isWallSliding) 
+            else if (isWallSliding)
             {
-            isWallJumping = true;
-                Invoke("StopWallJumping", wallJumpDuration);
+                WallJump();
             }
             else if (canDoubleJump)
             {
-                // Doble salto
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
-                canDoubleJump = false; // Ya no puede hacer doble salto
+                canDoubleJump = false;
             }
         }
 
@@ -76,13 +68,13 @@ public class Movimiento : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
         }
 
         WallSlide();
-        WallJump();
 
         if (!isWallJumping)
         {
@@ -92,24 +84,18 @@ public class Movimiento : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         if (isDashing)
         {
             return;
         }
 
-        //if (!isWallJumping)
-        //{
-            //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
-        //}
-        if (isWallJumping) 
-        {
-            rb.linearVelocity = new Vector2(-horizontal * wallJumpForce.x, wallJumpForce.y);
-        }
-        else 
+        if (!isWallJumping)
         {
             rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
         }
+
+        LimitVelocity();
+
         if (isGrounded())
         {
             canDoubleJump = true;
@@ -117,7 +103,7 @@ public class Movimiento : MonoBehaviour
 
         if (isWallSliding)
         {
-            canDoubleJump = true; // Restablecer el doble salto al deslizarse por una pared
+            canDoubleJump = true;
         }
     }
 
@@ -130,51 +116,35 @@ public class Movimiento : MonoBehaviour
     {
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
+
     private void WallSlide()
     {
         if (IsWalled() && !isGrounded() && horizontal != 0f)
         {
             isWallSliding = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
-            //rb.gravityScale = originalGravityScale * 0.1f;
         }
         else
         {
             isWallSliding = false;
-            //rb.gravityScale = originalGravityScale;
         }
-
     }
 
     private void WallJump()
     {
-        if (isWallSliding)
-        {
-            isWallJumping = false;
-            wallJumpingDirection = -transform.localScale.x;
-            wallJumpingCounter = wallJumpingTime;
+        isWallJumping = true;
+        wallJumpingDirection = -transform.localScale.x;
 
-            CancelInvoke(nameof(StopWallJumping));
-        }
-        else
-        {
-            wallJumpingCounter -= Time.deltaTime;
-        }
-        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
-        {
-            isWallJumping = true;
-            //rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
-            wallJumpingCounter = 0f;
+        rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpForce.x, wallJumpForce.y);
 
-            if (transform.localScale.x != wallJumpingDirection)
-            {
-                isFacingRight = !isFacingRight;
-                Vector3 localScale = transform.localScale;
-                localScale.x *= -1f;
-                transform.localScale = localScale;
-            }
+        // Desactiva temporalmente el control horizontal
+        horizontal = 0f;
 
-            //Invoke(nameof(StopWallJumping), wallJumpingDuration);
+        Invoke(nameof(StopWallJumping), wallJumpDuration);
+
+        if (transform.localScale.x != wallJumpingDirection)
+        {
+            Flip();
         }
     }
 
@@ -182,6 +152,7 @@ public class Movimiento : MonoBehaviour
     {
         isWallJumping = false;
     }
+
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
@@ -195,8 +166,6 @@ public class Movimiento : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        Debug.Log($"Dashing! FacingRight: {isFacingRight}, Power: {dashingPower}");
-
         canDash = false;
         isDashing = true;
 
@@ -212,5 +181,13 @@ public class Movimiento : MonoBehaviour
 
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    private void LimitVelocity()
+    {
+        rb.linearVelocity = new Vector2(
+            Mathf.Clamp(rb.linearVelocity.x, -maxHorizontalSpeed, maxHorizontalSpeed),
+            Mathf.Clamp(rb.linearVelocity.y, -maxVerticalSpeed, maxVerticalSpeed)
+        );
     }
 }
