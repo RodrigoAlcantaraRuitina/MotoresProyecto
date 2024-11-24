@@ -596,6 +596,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a42395e7be74374684d231471e71b95, type: 3}
+--- !u!4 &339488305 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5712668563699643859, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+  m_PrefabInstance: {fileID: 1991706463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &362462165
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +664,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2717,6 +2722,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1181987400434046029, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1470604545496902009, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01
@@ -2818,6 +2827,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8062200936422192009, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      propertyPath: bala
+      value: 
+      objectReference: {fileID: 7123508163185687286, guid: 1ea522ee94c16244c84344552e32616a, type: 3}
+    - target: {fileID: 8062200936422192009, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
       propertyPath: wallJumpForce.x
       value: 10
       objectReference: {fileID: 0}
@@ -2827,8 +2840,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8062200936422192009, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
       propertyPath: wallJumpDuration
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8062200936422192009, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      propertyPath: controladorDisparo
+      value: 
+      objectReference: {fileID: 339488305}
     - target: {fileID: 8962990846197470689, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
       propertyPath: m_Size.x
       value: 1

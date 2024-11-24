@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154769641}
   - component: {fileID: 154769642}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GameObject (1)
   m_TagString: suelo
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 324230284}
   - component: {fileID: 324230285}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GameObject (2)
   m_TagString: suelo
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -38532,7 +38532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1555163360}
   - component: {fileID: 1555163361}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GameObject
   m_TagString: suelo
   m_Icon: {fileID: 0}
@@ -45771,7 +45771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116879522}
   - component: {fileID: 2116879523}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pared.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45891,6 +45891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pared
       objectReference: {fileID: 0}
+    - target: {fileID: 1221137616939326725, guid: 34a7cb19b6786204cbe8d05475164878, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45963,7 +45967,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3009821900419125727, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5684582269360798666, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: m_Name
@@ -46011,7 +46015,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8062200936422192009, guid: eacbf16abcae407488e825c2ea406798, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062200936422192009, guid: eacbf16abcae407488e825c2ea406798, type: 3}
+      propertyPath: wallJumpForce.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062200936422192009, guid: eacbf16abcae407488e825c2ea406798, type: 3}
+      propertyPath: wallJumpForce.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062200936422192009, guid: eacbf16abcae407488e825c2ea406798, type: 3}
+      propertyPath: wallJumpDuration
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
