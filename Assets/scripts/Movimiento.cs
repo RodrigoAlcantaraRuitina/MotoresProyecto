@@ -17,7 +17,7 @@ public class Movimiento : MonoBehaviour
 
     private bool isWallJumping;
     private float wallJumpingDirection;
-    private float wallJumpingTime = 0.2f;
+    //private float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
     public float wallJumpDuration = 0.4f;
     public Vector2 wallJumpForce = new Vector2(8f, 16f);

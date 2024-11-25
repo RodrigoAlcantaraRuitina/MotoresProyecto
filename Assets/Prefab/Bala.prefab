@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 30
   "da\xF1o": 1
+  controladorDisparo: {fileID: 0}
 --- !u!58 &758164777680337911
 CircleCollider2D:
   m_ObjectHideFlags: 0
