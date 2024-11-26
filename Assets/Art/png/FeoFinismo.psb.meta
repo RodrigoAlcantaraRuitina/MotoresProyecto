@@ -1,0 +1,932 @@
+fileFormatVersion: 2
+guid: b11245360a9b84945be9823ed9ced287
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 500
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: ba93f2d7f4f4e0b4592ab9dcb13081f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: Layer 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 315
+      y: 991
+      width: 0
+      height: 0
+    spriteID: 9c5b45cafd5b18c4aab5b93a7e175e72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 315, y: 991}
+    spritePosition: {x: 0, y: 1024}
+  - name: hombro
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 315
+      y: 780
+      width: 90
+      height: 203
+    spriteID: 3e96d142abfbd67419af99c786ed64f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 315, y: 780}
+    spritePosition: {x: 300, y: 613}
+  - name: mano
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 1590
+      width: 59
+      height: 124
+    spriteID: 2c3ba001199753142af6fa771837fb18
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 1590}
+    spritePosition: {x: 415, y: 265}
+  - name: antebrazo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 387
+      width: 109
+      height: 234
+    spriteID: b3f4cb2b4f4d45340bf3d57f2c303b00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 230, y: 387}
+    spritePosition: {x: 333, y: 347}
+  - name: brazo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 1420
+      width: 49
+      height: 253
+    spriteID: 41db9d0a62f493240993e280ca0c80c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 230, y: 1420}
+    spritePosition: {x: 323, y: 525}
+  - name: torso 1 A
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 387
+      width: 218
+      height: 238
+    spriteID: 2af895694089a53409a80be003200cb1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 387}
+    spritePosition: {x: 198, y: 694}
+  - name: mandibuSup B
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 1035
+      width: 147
+      height: 128
+    spriteID: 0709ed42b8224e740bfacfddd095e84f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 230, y: 1035}
+    spritePosition: {x: 400, y: 758}
+  - name: Mandibula inferior De
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 1306
+      width: 122
+      height: 106
+    spriteID: 9061b1d42c2e85a44940c71f0d5f3ff9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 230, y: 1306}
+    spritePosition: {x: 425, y: 748}
+  - name: cuello
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 1681
+      width: 110
+      height: 99
+    spriteID: 57ba0c4106dfada4fb07439bbdca10b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 230, y: 1681}
+    spritePosition: {x: 367, y: 765}
+  - name: brazo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 780
+      width: 77
+      height: 247
+    spriteID: 3590556ec47811c4ab619fb392e232e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 230, y: 780}
+    spritePosition: {x: 345, y: 543}
+  - name: mano
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 347
+      y: 387
+      width: 72
+      height: 116
+    spriteID: 14c6940dd280cd24fa70c5093771f2af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 347, y: 387}
+    spritePosition: {x: 497, y: 304}
+  - name: antebrazo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1590
+      width: 143
+      height: 218
+    spriteID: e58191f12ff555e47b0cfdea6285ab67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1590}
+    spritePosition: {x: 385, y: 380}
+  - name: pie derecho
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 433
+      y: 264
+      width: 139
+      height: 55
+    spriteID: 8758994c6c41dc24ab0031b9087ca1f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 433, y: 264}
+    spritePosition: {x: 255, y: 54}
+  - name: pierna derecha
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1137
+      width: 195
+      height: 206
+    spriteID: 142cde31996b96946970f49d6bcf4101
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1137}
+    spritePosition: {x: 202, y: 160}
+  - name: talon derecho
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 629
+      width: 134
+      height: 143
+    spriteID: bccdd68b9d8bfef4390e9ec061122493
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 230, y: 629}
+    spritePosition: {x: 191, y: 43}
+  - name: muslo derecho
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 906
+      width: 199
+      height: 223
+    spriteID: e5c5c98816057da4db4d02f743f18c84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 906}
+    spritePosition: {x: 191, y: 313}
+  - name: aentrepierna
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 421
+      height: 375
+    spriteID: 30f8496640e09e94bab38ce06081f996
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 177, y: 453}
+  - name: abdomen
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 633
+      width: 171
+      height: 265
+    spriteID: 7832d20193ff08140a2883ff15913df8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 633}
+    spritePosition: {x: 195, y: 526}
+  - name: abdomen bajo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1816
+      width: 141
+      height: 203
+    spriteID: 6e3594c019d20e94aaecf3944ff31d87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1816}
+    spritePosition: {x: 196, y: 526}
+  - name: pie izquierdo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 433
+      y: 191
+      width: 134
+      height: 65
+    spriteID: 5e9b04fd8da80814f8351af6112e840f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 433, y: 191}
+    spritePosition: {x: 357, y: 74}
+  - name: pierna izquierdo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1351
+      width: 154
+      height: 231
+    spriteID: 41fa2818997d9fe4c851a8efee74c1f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1351}
+    spritePosition: {x: 298, y: 177}
+  - name: talon izqueierdo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 230
+      y: 1171
+      width: 148
+      height: 127
+    spriteID: 262e56dba22cbbc47abc7337e57eba2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 230, y: 1171}
+    spritePosition: {x: 291, y: 81}
+  - name: muslo izquierdo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 433
+      y: 4
+      width: 242
+      height: 179
+    spriteID: 8a6efd3d74b917e4ab6f815af35927bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 433, y: 4}
+    spritePosition: {x: 204, y: 367}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Layer 1
+    spriteName: Layer 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9c5b45cafd5b18c4aab5b93a7e175e72
+    layerID: 25
+    mosaicPosition: {x: 315, y: 991}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: hombro
+    spriteName: hombro
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3e96d142abfbd67419af99c786ed64f4
+    layerID: 23
+    mosaicPosition: {x: 315, y: 780}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: mano
+    spriteName: mano
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2c3ba001199753142af6fa771837fb18
+    layerID: 22
+    mosaicPosition: {x: 155, y: 1590}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: antebrazo
+    spriteName: antebrazo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b3f4cb2b4f4d45340bf3d57f2c303b00
+    layerID: 21
+    mosaicPosition: {x: 230, y: 387}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: brazo
+    spriteName: brazo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 41db9d0a62f493240993e280ca0c80c3
+    layerID: 20
+    mosaicPosition: {x: 230, y: 1420}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: torso 1 A
+    spriteName: torso 1 A
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2af895694089a53409a80be003200cb1
+    layerID: 19
+    mosaicPosition: {x: 4, y: 387}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: mandibuSup B
+    spriteName: mandibuSup B
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0709ed42b8224e740bfacfddd095e84f
+    layerID: 29
+    mosaicPosition: {x: 230, y: 1035}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Mandibula inferior De
+    spriteName: Mandibula inferior De
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9061b1d42c2e85a44940c71f0d5f3ff9
+    layerID: 28
+    mosaicPosition: {x: 230, y: 1306}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: cuello
+    spriteName: cuello
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 57ba0c4106dfada4fb07439bbdca10b2
+    layerID: 17
+    mosaicPosition: {x: 230, y: 1681}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: brazo
+    spriteName: brazo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3590556ec47811c4ab619fb392e232e0
+    layerID: 16
+    mosaicPosition: {x: 230, y: 780}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: mano
+    spriteName: mano
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 14c6940dd280cd24fa70c5093771f2af
+    layerID: 15
+    mosaicPosition: {x: 347, y: 387}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: antebrazo
+    spriteName: antebrazo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e58191f12ff555e47b0cfdea6285ab67
+    layerID: 14
+    mosaicPosition: {x: 4, y: 1590}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pie derecho
+    spriteName: pie derecho
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8758994c6c41dc24ab0031b9087ca1f9
+    layerID: 13
+    mosaicPosition: {x: 433, y: 264}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pierna derecha
+    spriteName: pierna derecha
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 142cde31996b96946970f49d6bcf4101
+    layerID: 12
+    mosaicPosition: {x: 4, y: 1137}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: talon derecho
+    spriteName: talon derecho
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bccdd68b9d8bfef4390e9ec061122493
+    layerID: 11
+    mosaicPosition: {x: 230, y: 629}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: muslo derecho
+    spriteName: muslo derecho
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e5c5c98816057da4db4d02f743f18c84
+    layerID: 10
+    mosaicPosition: {x: 4, y: 906}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: aentrepierna
+    spriteName: aentrepierna
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 30f8496640e09e94bab38ce06081f996
+    layerID: 9
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: abdomen
+    spriteName: abdomen
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7832d20193ff08140a2883ff15913df8
+    layerID: 8
+    mosaicPosition: {x: 4, y: 633}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: abdomen bajo
+    spriteName: abdomen bajo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6e3594c019d20e94aaecf3944ff31d87
+    layerID: 7
+    mosaicPosition: {x: 4, y: 1816}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pie izquierdo
+    spriteName: pie izquierdo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5e9b04fd8da80814f8351af6112e840f
+    layerID: 6
+    mosaicPosition: {x: 433, y: 191}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pierna izquierdo
+    spriteName: pierna izquierdo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 41fa2818997d9fe4c851a8efee74c1f0
+    layerID: 5
+    mosaicPosition: {x: 4, y: 1351}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: talon izqueierdo
+    spriteName: talon izqueierdo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 262e56dba22cbbc47abc7337e57eba2d
+    layerID: 4
+    mosaicPosition: {x: 230, y: 1171}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: muslo izquierdo
+    spriteName: muslo izquierdo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8a6efd3d74b917e4ab6f815af35927bf
+    layerID: 3
+    mosaicPosition: {x: 433, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

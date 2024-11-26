@@ -224,7 +224,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 90
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -342,91 +342,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4749389914782194995
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1207025668256710240, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.143
-      objectReference: {fileID: 0}
-    - target: {fileID: 2829348014436419863, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 98.975
-      objectReference: {fileID: 0}
-    - target: {fileID: 3790994334257668051, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 56.561
-      objectReference: {fileID: 0}
-    - target: {fileID: 5486511782367935860, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 59.531
-      objectReference: {fileID: 0}
-    - target: {fileID: 5701058590534850698, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_Name
-      value: varianteFeo
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783055621277223304, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 93.619
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905745844726628585, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -104
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905745844726628585, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -60.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905745844726628585, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905745844726628585, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905745844726628585, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905745844726628585, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905745844726628585, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905745844726628585, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905745844726628585, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905745844726628585, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7591934568447022381, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -85.562
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa5407bfdd3f06d418eef3974da1eab0, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1047018278}
-  - {fileID: 4749389914782194995}
   - {fileID: 1133088961}
