@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class Movimiento : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 12f;
-    private float jumpingPower = 16f;
+    private float speed = 16f;  //12f original
+    private float jumpingPower = 18f;   //16f original
     private bool isFacingRight = true;
 
     private bool canDoubleJump;
@@ -21,6 +21,7 @@ public class Movimiento : MonoBehaviour
     private float wallJumpingCounter;
     public float wallJumpDuration = 0.4f;
     public Vector2 wallJumpForce = new Vector2(8f, 16f);
+    public Vector2 jumpFall;
 
     private bool canDash = true;
     private bool isDashing;
@@ -136,7 +137,7 @@ public class Movimiento : MonoBehaviour
         wallJumpingDirection = -transform.localScale.x;
 
         rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpForce.x, wallJumpForce.y);
-
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y + jumpFall.y);
         // Desactiva temporalmente el control horizontal
         horizontal = 0f;
 

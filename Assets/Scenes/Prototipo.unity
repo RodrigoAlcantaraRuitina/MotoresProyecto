@@ -664,7 +664,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2909,6 +2909,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7123508163185687286, guid: 1ea522ee94c16244c84344552e32616a, type: 3}
     - target: {fileID: 8062200936422192009, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      propertyPath: jumpFall.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062200936422192009, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
       propertyPath: wallJumpForce.x
       value: 10
       objectReference: {fileID: 0}
@@ -2924,6 +2928,10 @@ PrefabInstance:
       propertyPath: controladorDisparo
       value: 
       objectReference: {fileID: 339488305}
+    - target: {fileID: 8404499907358940851, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8962990846197470689, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
       propertyPath: m_Size.x
       value: 1
