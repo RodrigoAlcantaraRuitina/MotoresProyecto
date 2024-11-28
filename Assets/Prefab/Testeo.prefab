@@ -307,6 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallJumpDuration: 0
   wallJumpForce: {x: 0, y: 0}
+  jumpFall: {x: 0, y: 0}
   rb: {fileID: 8404499907358940851}
   groundCheck: {fileID: 1470604545496902009}
   groundLayer:
