@@ -38493,6 +38493,10 @@ PrefabInstance:
       value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 5737904294746635987, guid: df997645d43c99a409f9f4e1b098d616, type: 3}
+      propertyPath: vida
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737904294746635987, guid: df997645d43c99a409f9f4e1b098d616, type: 3}
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
@@ -38641,6 +38645,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8048307955997710659, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
   m_PrefabInstance: {fileID: 1771781646}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1620618737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620618726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d7ba9ecbcffb54b9c9d651396cc0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controladorGolpe: {fileID: 1402825471}
+  radioGolpe: 0.6
+  "da\xF1oGolpe": 1
 --- !u!1 &1697441918
 GameObject:
   m_ObjectHideFlags: 0
@@ -45626,7 +45645,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8048307955997710659, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1402825471}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5684582269360798666, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1620618737}
   m_SourcePrefab: {fileID: 100100000, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
 --- !u!4 &1774591090 stripped
 Transform:
