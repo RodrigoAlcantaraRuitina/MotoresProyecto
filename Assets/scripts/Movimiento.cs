@@ -13,7 +13,7 @@ public class Movimiento : MonoBehaviour
     private bool canDoubleJump;
 
     private bool isWallSliding;
-    private float wallSlidingSpeed = 10f;
+    private float wallSlidingSpeed = 0f;
 
     private bool isWallJumping;
     private float wallJumpingDirection;
