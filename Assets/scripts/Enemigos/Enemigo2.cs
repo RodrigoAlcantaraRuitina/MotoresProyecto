@@ -7,12 +7,13 @@ public class Enemigo2 : MonoBehaviour
     public Transform[] patrolPoints;
     public int targetPoint;
     public float speed;
+    public float cadencia;
     [SerializeField] private Transform controladorDisparo;
     [SerializeField] private GameObject ataque;
     void Start()
     {
         targetPoint = 0;
-        InvokeRepeating("Disparar", 0f, 3f);
+        InvokeRepeating("Disparar", 0f, cadencia);
     }
 
      private void Disparar()
