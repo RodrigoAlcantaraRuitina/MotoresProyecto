@@ -118,7 +118,7 @@ public class Movimiento : MonoBehaviour
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
 
-    private void WallSlide()
+    public void WallSlide()
     {
         if (IsWalled() && !isGrounded() && horizontal != 0f)
         {
@@ -131,7 +131,7 @@ public class Movimiento : MonoBehaviour
         }
     }
 
-    private void WallJump()
+    public void WallJump()
     {
         isWallJumping = true;
         wallJumpingDirection = -transform.localScale.x;
@@ -165,7 +165,7 @@ public class Movimiento : MonoBehaviour
         }
     }
 
-    private IEnumerator Dash()
+    public IEnumerator Dash()
     {
         canDash = false;
         isDashing = true;
