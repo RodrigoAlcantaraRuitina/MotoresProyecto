@@ -7,6 +7,7 @@ public class Movimiento : MonoBehaviour
 {
     private float horizontal;
     private float speed = 16f;  //12f original
+    private float speedIndetectable = 36f;  //12f original
     private float jumpingPower = 18f;   //16f original
     private bool isFacingRight = true;
 
@@ -38,6 +39,12 @@ public class Movimiento : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
+    private Invisbilidad invisibilidad; // Referencia al script de invisibilidad
+
+    void Start()
+    {
+        invisibilidad = GetComponent<Invisbilidad>(); // Buscar el componente en el mismo GameObject
+    }
     void Update()
     {
         if (isDashing)
@@ -92,8 +99,10 @@ public class Movimiento : MonoBehaviour
 
         if (!isWallJumping)
         {
-            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
-        }
+            //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);//original
+            float currentSpeed = invisibilidad.indetectable ? speedIndetectable : speed;
+            rb.linearVelocity = new Vector2(horizontal * currentSpeed, rb.linearVelocity.y);
+    }
 
         LimitVelocity();
 
