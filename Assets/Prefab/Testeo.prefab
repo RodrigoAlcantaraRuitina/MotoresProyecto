@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 1181987400434046029}
   - component: {fileID: 7570410963911262460}
   - component: {fileID: 1522640650418314258}
+  - component: {fileID: 5949454999663709383}
   m_Layer: 8
   m_Name: Testeo
   m_TagString: Player
@@ -404,6 +405,20 @@ MonoBehaviour:
   controladorGolpe: {fileID: 2126391326325082699}
   radioGolpe: 0.6
   "da\xF1oGolpe": 1
+--- !u!114 &5949454999663709383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684582269360798666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56e99d877f46f14bbad8024d71793a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indetectable: 0
+  puedeInvisibilidad: 0
 --- !u!1 &5696051134352876356
 GameObject:
   m_ObjectHideFlags: 0
