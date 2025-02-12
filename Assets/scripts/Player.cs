@@ -3,7 +3,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Movimiento : MonoBehaviour
+public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar el nombre de forma seguro
+
 {
     private float horizontal;
     private float speed = 16f;  //12f original
