@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar el nombre de forma seguro
 
 {
+    public int maxHealth = 5;
+    int currentHealth;
+
     private float horizontal;
     private float speed = 16f;  //12f original
     private float speedIndetectable = 36f;  //12f original
@@ -45,6 +48,7 @@ public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar
     void Start()
     {
         invisibilidad = GetComponent<Invisbilidad>(); // Buscar el componente en el mismo GameObject
+        currentHealth = maxHealth;
     }
     void Update()
     {
@@ -117,7 +121,11 @@ public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar
             canDoubleJump = true;
         }
     }
-
+    void ChangeHealth(int amount)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
+    }
     private bool isGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
