@@ -4,11 +4,17 @@ using UnityEngine.SceneManagement;
 public class vida : MonoBehaviour
 {
     [SerializeField] private float hp;
+    public int maxHealth = 5;
+    int currentHealth;
 
-    public void TomarDaño(float daño)
+    private void Start()
     {
-        hp -= daño;
-        if (hp <= 0)
+        currentHealth = maxHealth;
+    }
+    public void TomarDaño(int daño)
+    {
+        currentHealth -= daño;
+        if (currentHealth <= 0)
         {
             Muerte();
         }

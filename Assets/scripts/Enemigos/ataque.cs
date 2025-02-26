@@ -4,7 +4,7 @@ public class ataque : MonoBehaviour
 {
     [SerializeField] private float velocidad;
 
-    [SerializeField] private float daño;
+    [SerializeField] private int daño;
 
     private void Start()
     {

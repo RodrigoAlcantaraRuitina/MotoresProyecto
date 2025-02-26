@@ -3,7 +3,7 @@ using UnityEngine;
 public class pinchos : MonoBehaviour
 {
 
-    [SerializeField] private float daño;
+    [SerializeField] private int daño;
     private void OnTriggerEnter2D(Collider2D Other)
     {
         if (Other.CompareTag("Player"))

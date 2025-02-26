@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4385c09349fa61143b6b0ce350afc7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 5
   wallJumpDuration: 0.2
   wallJumpForce: {x: 10, y: 20}
   jumpFall: {x: 0, y: 20}
