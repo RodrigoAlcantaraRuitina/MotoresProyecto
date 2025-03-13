@@ -2,50 +2,99 @@ using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Invisbilidad : MonoBehaviour
 {
+    public Image rellenoBarraVida;
+    public int energia = 10;
+    public bool indetectable = false; // Nueva variable
+
+    private bool reduciendoEnergia = false;
+    private bool energiaVacio = false;
+
     private SpriteRenderer spriteRenderer;
     private float originalAlpha;
     private Color originalColor;
-    public bool indetectable;
-    public bool puedeInvisibilidad;
 
     void Start()
     {
-     puedeInvisibilidad = true;
-     indetectable = false;
-    spriteRenderer = GetComponent<SpriteRenderer>();
-        originalAlpha = spriteRenderer.color.a; // Guarda la opacidad original
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalAlpha = spriteRenderer.color.a;
         originalColor = spriteRenderer.color;
+
+        StartCoroutine(RegenerarEnergia());
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && puedeInvisibilidad)
+        if (Input.GetKeyDown(KeyCode.C) && !reduciendoEnergia && energia > 0 && !energiaVacio)
         {
+            StartCoroutine(RestarEnergia());
             StartCoroutine(ChangeOpacityTemporarily());
+        }
+
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            StopCoroutine(RestarEnergia());
+            StopCoroutine(ChangeOpacityTemporarily());
+            reduciendoEnergia = false;
+            indetectable = false; // Desactiva indetectable cuando se suelta "C"
+            StartCoroutine(ActivarEnergiaVacio());
+            RestoreOpacity(); // Restaurar opacidad
+        }
+    }
+
+    IEnumerator RestarEnergia()
+    {
+        reduciendoEnergia = true;
+        indetectable = true; // Activa indetectable mientras se reduce energía
+
+        while (Input.GetKey(KeyCode.C) && energia > 0)
+        {
+            energia = Mathf.Max(energia - 1, 0);
+            Debug.Log("Energía restante: " + energia);
+            yield return new WaitForSeconds(1f);
+        }
+
+        reduciendoEnergia = false;
+        indetectable = false; // Desactiva indetectable si se acaba la energía
+    }
+
+    IEnumerator ActivarEnergiaVacio()
+    {
+        energiaVacio = true;
+        yield return new WaitForSeconds(1f);
+        energiaVacio = false;
+    }
+
+    IEnumerator RegenerarEnergia()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            if (!reduciendoEnergia && !energiaVacio)
+            {
+                energia = Mathf.Min(energia + 1, 10);
+                Debug.Log("Energía regenerada: " + energia);
+            }
         }
     }
 
     IEnumerator ChangeOpacityTemporarily()
     {
-        puedeInvisibilidad = false;
-        indetectable = true; // Activar estado indetectable
-        // Reduce la opacidad en 50%
-        SetSpriteOpacity(originalAlpha * 0.5f);
-        SetSpriteColor(Color.green); // Cambiar a color verde
+        while (reduciendoEnergia)
+        {
+            SetSpriteOpacity(originalAlpha * 0.5f);
+            SetSpriteColor(Color.green);
+            yield return null;
+        }
+    }
 
-        // Espera 3 segundos
-        yield return new WaitForSeconds(3f);
-
-        // Restaura la opacidad original
+    void RestoreOpacity()
+    {
         SetSpriteOpacity(originalAlpha);
-        SetSpriteColor(originalColor); // Restaurar color original
-        indetectable = false; // Desactivar estado indetectable
-        // Espera 2 segundos adicionales antes de permitir reutilizar la habilidad
-        yield return new WaitForSeconds(2f);
-        puedeInvisibilidad = true; // Habilidad disponible nuevamente
+        SetSpriteColor(originalColor);
     }
 
     void SetSpriteOpacity(float alpha)
@@ -54,6 +103,7 @@ public class Invisbilidad : MonoBehaviour
         newColor.a = alpha;
         spriteRenderer.color = newColor;
     }
+
     void SetSpriteColor(Color color)
     {
         spriteRenderer.color = color;
