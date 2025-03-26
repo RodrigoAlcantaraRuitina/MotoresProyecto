@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 1522640650418314258}
   - component: {fileID: 5949454999663709383}
   m_Layer: 8
-  m_Name: Testeo
+  m_Name: Jugador
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -308,7 +308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4385c09349fa61143b6b0ce350afc7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
   wallJumpDuration: 0.2
   wallJumpForce: {x: 10, y: 20}
   jumpFall: {x: 0, y: 20}
@@ -390,7 +389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441576944ee072b4ba1e0a2f0b93b028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
   maxHealth: 5
 --- !u!114 &1522640650418314258
 MonoBehaviour:
@@ -419,8 +417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56e99d877f46f14bbad8024d71793a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rellenoBarraVida: {fileID: 0}
+  energia: 10
   indetectable: 0
-  puedeInvisibilidad: 0
 --- !u!1 &5696051134352876356
 GameObject:
   m_ObjectHideFlags: 0

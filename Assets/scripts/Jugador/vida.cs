@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class vida : MonoBehaviour
 {
-    [SerializeField] private float hp;
     public int maxHealth = 5;
-    int currentHealth;
+    public int currentHealth { get; private set; } 
 
     private void Start()
     {
