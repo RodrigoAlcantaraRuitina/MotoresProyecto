@@ -402,6 +402,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1110906765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110906766}
+  m_Layer: 0
+  m_Name: IK_Target_PieDerecho
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110906766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110906765}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5723382451975518714}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1133088959
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +658,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5348632702912610868, guid: ea08a7eed13fd1140828d7d4f6e93d9d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2088482059}
+    - targetCorrespondingSourceObject: {fileID: 3119185498304361819, guid: ea08a7eed13fd1140828d7d4f6e93d9d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1110906766}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6553354070033144407, guid: ea08a7eed13fd1140828d7d4f6e93d9d, type: 3}
       insertIndex: -1
@@ -656,11 +690,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Solvers:
   - {fileID: 2088482058}
+  - {fileID: 0}
   m_Weight: 1
   m_AlwaysUpdate: 1
   m_SolverEditorData:
   - color: {r: 0, g: 1, b: 0, a: 1}
     showGizmo: 1
+  - color: {r: 0, g: 1, b: 0, a: 1}
+    showGizmo: 1
+--- !u!4 &5723382451975518714 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3119185498304361819, guid: ea08a7eed13fd1140828d7d4f6e93d9d, type: 3}
+  m_PrefabInstance: {fileID: 5723382451975518710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
