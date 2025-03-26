@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Invisbilidad : MonoBehaviour
 {
-    public Image rellenoBarraVida;
     public int energia = 10;
     public bool indetectable = false; // Nueva variable
 
@@ -70,7 +69,7 @@ public class Invisbilidad : MonoBehaviour
 
     IEnumerator RegenerarEnergia()
     {
-        while (true)
+        while (energia < 10) // Solo regenera cuando no está en su máximo
         {
             yield return new WaitForSeconds(1f);
             if (!reduciendoEnergia && !energiaVacio)

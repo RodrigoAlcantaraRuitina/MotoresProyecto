@@ -19173,6 +19173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jugador
       objectReference: {fileID: 0}
+    - target: {fileID: 5949454999663709383, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8048307955997710659, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.4444847
@@ -19216,7 +19220,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5684582269360798666, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1057943702}
+    - targetCorrespondingSourceObject: {fileID: 5684582269360798666, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1057943703}
   m_SourcePrefab: {fileID: 100100000, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
 --- !u!1 &523058857
 GameObject:
@@ -29659,6 +29669,7 @@ GameObject:
   - component: {fileID: 795621457}
   - component: {fileID: 795621459}
   - component: {fileID: 795621458}
+  - component: {fileID: 795621460}
   m_Layer: 5
   m_Name: energia
   m_TagString: Untagged
@@ -29724,6 +29735,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795621456}
   m_CullTransparentMesh: 1
+--- !u!114 &795621460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795621456}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a415d2e315b1dde478e11796635e6cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rellenoBarraVida: {fileID: 1033717102}
+  velocidadTransicion: 5
 --- !u!1 &798047770
 GameObject:
   m_ObjectHideFlags: 0
@@ -40502,6 +40527,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5684582269360798666, guid: 589cf4c09619f504fb8e9ac571f54516, type: 3}
   m_PrefabInstance: {fileID: 515345678}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1057943702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057943689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f53123bf5c0ee84c8b2a6feda37d00f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StaminaBar: {fileID: 1033717102}
+  Stamina: 100
+  MaxStamina: 100
+  staminaConsume: 25
+  ChargeRate: 30
+--- !u!114 &1057943703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057943689}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56e99d877f46f14bbad8024d71793a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energia: 10
+  indetectable: 0
 --- !u!1 &1060169720
 GameObject:
   m_ObjectHideFlags: 0

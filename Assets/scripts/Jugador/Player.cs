@@ -41,11 +41,11 @@ public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
-    private Invisbilidad invisibilidad; // Referencia al script de invisibilidad
+    private Invisibilidad invisibilidad; // Referencia al script de invisibilidad
 
     void Start()
     {
-        invisibilidad = GetComponent<Invisbilidad>(); // Buscar el componente en el mismo GameObject
+        invisibilidad = GetComponent<Invisibilidad>(); // Buscar el componente en el mismo GameObject
     }
     void Update()
     {

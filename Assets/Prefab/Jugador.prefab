@@ -135,13 +135,8 @@ GameObject:
   - component: {fileID: 8962990846197470689}
   - component: {fileID: 8404499907358940851}
   - component: {fileID: 8062200936422192009}
-  - component: {fileID: 3009821900419125727}
-  - component: {fileID: 2395010493653614223}
-  - component: {fileID: 5332951859187016003}
-  - component: {fileID: 1181987400434046029}
   - component: {fileID: 7570410963911262460}
   - component: {fileID: 1522640650418314258}
-  - component: {fileID: 5949454999663709383}
   m_Layer: 8
   m_Name: Jugador
   m_TagString: Player
@@ -320,63 +315,6 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 3072
---- !u!114 &3009821900419125727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5684582269360798666}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6fd2345572767e45a1595764140a8cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidad: 10
-  fuerzaSalto: 15
-  fuerzaSalto2: 10
---- !u!114 &2395010493653614223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5684582269360798666}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7c0369a3acd594459bea29492ceac2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alcance: 5
-  duracionDash: 0.2
-  cooldownDash: 1
---- !u!114 &5332951859187016003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5684582269360798666}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f54e57dbf5501884aa908f53338de7ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slideSpeed: 2
---- !u!114 &1181987400434046029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5684582269360798666}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72f34118cd33d584187c08f481121241, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controladorDisparo: {fileID: 5712668563699643859}
-  bala: {fileID: 7123508163185687286, guid: 1ea522ee94c16244c84344552e32616a, type: 3}
 --- !u!114 &7570410963911262460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,21 +343,6 @@ MonoBehaviour:
   controladorGolpe: {fileID: 2126391326325082699}
   radioGolpe: 0.6
   "da\xF1oGolpe": 1
---- !u!114 &5949454999663709383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5684582269360798666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d56e99d877f46f14bbad8024d71793a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rellenoBarraVida: {fileID: 0}
-  energia: 10
-  indetectable: 0
 --- !u!1 &5696051134352876356
 GameObject:
   m_ObjectHideFlags: 0
