@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 8062200936422192009}
   - component: {fileID: 7570410963911262460}
   - component: {fileID: 1522640650418314258}
+  - component: {fileID: 5375981582890846623}
+  - component: {fileID: 5960990438781544357}
   m_Layer: 8
   m_Name: Jugador
   m_TagString: Player
@@ -154,7 +156,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.075, y: -2.968, z: 0}
-  m_LocalScale: {x: 1.200928, y: 1.1458759, z: 0.31845036}
+  m_LocalScale: {x: 1.200928, y: 1.1458758, z: 0.31845036}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5712668563699643859}
@@ -343,6 +345,37 @@ MonoBehaviour:
   controladorGolpe: {fileID: 2126391326325082699}
   radioGolpe: 0.6
   "da\xF1oGolpe": 1
+--- !u!114 &5375981582890846623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684582269360798666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f53123bf5c0ee84c8b2a6feda37d00f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StaminaBar: {fileID: 0}
+  Stamina: 100
+  MaxStamina: 100
+  staminaConsume: 25
+  ChargeRate: 30
+--- !u!114 &5960990438781544357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684582269360798666}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56e99d877f46f14bbad8024d71793a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energia: 10
+  indetectable: 0
 --- !u!1 &5696051134352876356
 GameObject:
   m_ObjectHideFlags: 0

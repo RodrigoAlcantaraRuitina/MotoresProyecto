@@ -13,14 +13,14 @@ public class Enemigo2 : MonoBehaviour
     void Start()
     {
         targetPoint = 0;
-        InvokeRepeating("Disparar", 0f, cadencia);
+        //InvokeRepeating("Disparar", 0f, cadencia);
     }
 
-     private void Disparar()
-    {
+     //private void Disparar()
+    //{
         // Instancia la bala en la posición y rotación del controladorDisparo
-        Instantiate(ataque, controladorDisparo.position, controladorDisparo.rotation);
-    }
+  //      Instantiate(ataque, controladorDisparo.position, controladorDisparo.rotation);
+//    }
     public void TomarDaño(float daño)
     {
         vida -= daño;
@@ -54,5 +54,5 @@ public class Enemigo2 : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
+    //Restar entre la posicion del enemigo(en X) y jugador(en x). Si Jugador es mayor(<0) implica que esta en la derecha, si esta en la izquierda es menor (>0)
 }

@@ -169,7 +169,7 @@ public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar
 
     private void Flip()
     {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f) //para el enemigo modificar cuando se mueve
         {
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
