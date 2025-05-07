@@ -1,12 +1,12 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 
 public class Combate : MonoBehaviour
 {
-    [SerializeField] private Transform controladorGolpe;
+    [SerializeField] public Transform controladorGolpe;
     [SerializeField] private float radioGolpe;
-    [SerializeField] private float daÒoGolpe;
+    [SerializeField] private float da√±oGolpe;
 
     private void Update()
     {
@@ -17,13 +17,15 @@ public class Combate : MonoBehaviour
     }
     private void Golpe() 
     {
+        Debug.Log("Golpe"); // ‚Üê Registro en consola
+
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
         
         foreach (Collider2D colisionador in objetos) 
         {
             if (colisionador.CompareTag("Enemigo")) 
             {
-            colisionador.transform.GetComponent<Enemigo>().TomarDaÒo(daÒoGolpe);
+            colisionador.transform.GetComponent<Enemigo2>().TomarDa√±o(da√±oGolpe);
             }
         }
     

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemigo : MonoBehaviour
 {
     [SerializeField] private float vida;
+    //[SerializeField] private int vida;
     public Transform[] patrolPoints;
     public int targetPoint;
     public float speed;

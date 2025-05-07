@@ -10,17 +10,30 @@ public class Enemigo2 : MonoBehaviour
     public float cadencia;
     [SerializeField] private Transform controladorDisparo;
     [SerializeField] private GameObject ataque;
+
+
+    private bool isFacingRight = true;
+
     void Start()
     {
         targetPoint = 0;
         //InvokeRepeating("Disparar", 0f, cadencia);
     }
 
-     //private void Disparar()
+    //private void Disparar()
     //{
-        // Instancia la bala en la posición y rotación del controladorDisparo
-  //      Instantiate(ataque, controladorDisparo.position, controladorDisparo.rotation);
-//    }
+    // Instancia la bala en la posición y rotación del controladorDisparo
+    //      Instantiate(ataque, controladorDisparo.position, controladorDisparo.rotation);
+    //    }
+
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 escala = transform.localScale;
+        escala.x *= -1;
+        transform.localScale = escala;
+    }
+
     public void TomarDaño(float daño)
     {
         vida -= daño;
