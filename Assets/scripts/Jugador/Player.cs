@@ -43,9 +43,13 @@ public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar
 
     private Invisibilidad invisibilidad; // Referencia al script de invisibilidad
 
+    private Animator animator; //cambio
+
+
     void Start()
     {
         invisibilidad = GetComponent<Invisibilidad>(); // Buscar el componente en el mismo GameObject
+        animator = GetComponent<Animator>(); //cambio
     }
     void Update()
     {
@@ -55,6 +59,10 @@ public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        animator.SetFloat("Horizontal", Mathf.Abs(rb.linearVelocity.x)); //cambio
+        animator.SetBool("deslizando", isWallSliding); //cambio
+        animator.SetBool("disponibleDash", canDash); //cambio
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -71,6 +79,7 @@ public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
                 canDoubleJump = false;
+                animator.SetTrigger("dobleSalto"); //cambio
             }
         }
 
@@ -82,6 +91,7 @@ public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
+            animator.SetTrigger("dashDis"); //cambio
         }
 
         WallSlide();
@@ -117,6 +127,7 @@ public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar
         {
             canDoubleJump = true;
         }
+        animator.SetBool("enSuelo", isGrounded()); //cambio
     }
 
     private bool isGrounded()
