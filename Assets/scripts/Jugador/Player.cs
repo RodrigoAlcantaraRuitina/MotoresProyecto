@@ -61,6 +61,7 @@ public class Player : MonoBehaviour//manten ùlsado controly doble r para cambiar
         horizontal = Input.GetAxisRaw("Horizontal");
 
         animator.SetFloat("Horizontal", Mathf.Abs(rb.linearVelocity.x)); //cambio
+        animator.SetFloat("Vertical", rb.linearVelocity.y); //cambio
         animator.SetBool("deslizando", isWallSliding); //cambio
         animator.SetBool("disponibleDash", canDash); //cambio
 
