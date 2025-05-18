@@ -8,6 +8,14 @@ public class Combate : MonoBehaviour
     [SerializeField] private float radioGolpe;
     [SerializeField] private float dañoGolpe;
 
+
+
+    private Animator animator; //cambio
+    private void Start()
+    {
+        animator = GetComponent<Animator>(); //cambio
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0)) 
@@ -18,6 +26,8 @@ public class Combate : MonoBehaviour
     private void Golpe() 
     {
         Debug.Log("Golpe"); // ← Registro en consola
+
+        animator.SetTrigger("Atacando");
 
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
         
