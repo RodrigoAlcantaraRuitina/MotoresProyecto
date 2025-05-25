@@ -6,7 +6,10 @@ public class Enemigo : MonoBehaviour
 {
     [SerializeField] private float vida;
     //[SerializeField] private int vida;
- 
+    [SerializeField] private float cantidadPuntos;
+
+    [SerializeField] private Puntaje puntaje;
+
 
     void Start() 
     {
@@ -20,6 +23,7 @@ public class Enemigo : MonoBehaviour
 
         {
             Muerte();
+            puntaje.SumarPuntos(cantidadPuntos);
         }
 
     }

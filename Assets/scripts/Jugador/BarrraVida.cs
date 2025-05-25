@@ -21,9 +21,4 @@ public class BarrraVida : MonoBehaviour
             rellenoBarraVida.fillAmount = (float)vidaJugador.currentHealth / vidaJugador.maxHealth;
         }
     }
-
-    public void SumarPuntos(float puntosEntrada) 
-    {
-        puntosEntrada += puntosEntrada;
-    }
 }
