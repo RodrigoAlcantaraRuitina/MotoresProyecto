@@ -15,7 +15,7 @@ public class AbrirPuerta : MonoBehaviour
     {
         if (abrirP)
         {
-            animator.SetTrigger("abrir");
+            animator.SetTrigger("Abrir");
             abrirP = false; // Evita repetir el trigger
         }
     }

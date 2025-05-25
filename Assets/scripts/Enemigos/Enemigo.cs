@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,9 +16,9 @@ public class Enemigo : MonoBehaviour
        
     }
 
-    public void TomarDaño(float daño)
+    public void TomarDaÃ±o(float daÃ±o)
     {
-        vida -= daño;
+        vida -= daÃ±o;
         if (vida <= 0)
 
         {
