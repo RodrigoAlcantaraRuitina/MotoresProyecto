@@ -35,7 +35,7 @@ public class Combate : MonoBehaviour
         {
             if (colisionador.CompareTag("Enemigo")) 
             {
-            colisionador.transform.GetComponent<Enemigo2>().TomarDaño(dañoGolpe);
+            colisionador.transform.GetComponent<Enemigo>().TomarDaño(dañoGolpe);
             }
         }
     
